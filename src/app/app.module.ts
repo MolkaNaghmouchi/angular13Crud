@@ -8,7 +8,14 @@ import { TutorialDetailsComponent } from './components/tutorial-details/tutorial
 import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListThemeComponent } from './list-theme/list-theme.component';
+import { AddThemeComponent } from './components/add-theme/add-theme.component';
+import { DetailsThemeComponent } from './components/details-theme/details-theme.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +23,24 @@ import { HttpClientModule } from '@angular/common/http';
     AddTutorialComponent,
     TutorialDetailsComponent,
     TutorialsListComponent,
+    ListThemeComponent,
+    AddThemeComponent,
+    DetailsThemeComponent,
+
+
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MultiSelectModule,
+    BrowserAnimationsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

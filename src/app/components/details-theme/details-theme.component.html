@@ -1,0 +1,16 @@
+
+<div *ngIf="!viewMode">
+<h4>Theme</h4>
+
+    <form>   
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="currentTheme.nom" name="title" />
+      </div>
+     <!--<button class="badge badge-danger mr-2" (click)="deleteTutorial()">Delete</button>--> 
+  
+      <button type="submit" class="badge badge-success mb-2" (click)="updateTheme()">Update</button>
+      <p>{{ message }}</p>
+    </form>
+  </div>
+  

@@ -26,20 +26,37 @@
 
 
 
-        <div class="mb-0">
-          <label for="project-overview" class="form-label">Formation Adéquate</label>
-
-          <div class="mb-3">
-
-              <select [(ngModel)]="id_theme" class=" form-select " id="example-select ">
-                  <option *ngFor="let t of theme" value="{{t.id}}">{{t.nom}}</option>
-              </select>
-</div>
+        <!--div class="mb-0">
+          <label for="project-overview" class="form-label">Theme </label>
+          <ng-multiselect-dropdown [placeholder]="'groupe'" [settings]="dropdownSettings" [data]="theme"
+          [(ngModel)]="formation.groupe">
+        </ng-multiselect-dropdown>
 
 
-      </div>
+
+      </div>-->
+
+
+     <!-- <div class="form-group">
+        <label for="theme">Theme</label>wini page li kona 
+        <mat-select placeholder="Select Theme" [(ngModel)]="id_theme" name="theme">
+          <mat-option *ngFor="let item of theme" [value]="item.id">{{ item.nom }}</mat-option>
+        </mat-select>
+      </div>-->
+      
+    <!--  <mat-form-field>
+        <mat-label>Theme</mat-label>
+        <mat-select [(ngModel)]="id_theme" multiple>
+          <mat-option *ngFor="let item of theme" [value]="item.id">{{item.nom}}</mat-option>
+        </mat-select>
+      </mat-form-field> ahwaa lcode eli aamltou ena mta3 ng-multiselect-dropdown-->
+      <label for="theme">Theme</label>
+
+      <p-multiSelect [options]="theme" [(ngModel)]="selectedCities" optionValue="id" optionLabel="nom"></p-multiSelect>
+
+    
   
-        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+        <button (click)="saveTutorial()" class="btn btn-success" >Submit</button>
       </div>
   
       <div *ngIf="submitted">

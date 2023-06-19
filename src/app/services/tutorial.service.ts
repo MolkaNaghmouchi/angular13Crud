@@ -26,16 +26,22 @@ export class TutorialService {
 
 
 
-  create(data: any , id_theme:any): Observable<any> {
-    return this.http.post(`http://localhost:8080/api/add/${id_theme}`, data);
+  create(data: any ): Observable<any> {
+    return this.http.post(`http://localhost:8080/api/add`, data);
   }
 
 
 
-  update(id: any, data: any): Observable<any> {
+  /*update(id: any, data: any): Observable<any> {
     return this.http.put(`${baseUrl}/${id}`, data);
+  }*/
+
+  update(id_tutorial: any, id_theme: any , data: any): Observable<any> {
+    return this.http.put(`http://localhost:8080/api/update/${id_tutorial}/${id_theme}`, data);
   }
 
+
+  
   delete(id: any): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`);
   }
